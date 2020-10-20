@@ -2,7 +2,7 @@
 _pkgname="agena"
 pkgname="$_pkgname-bin"
 pkgver="2.22.0"
-pkgrel=14
+pkgrel=15
 pkgdesc="An easy-to-learn procedural programming language designed to be used in science, scripting, and many other applications."
 arch=('x86_64')
 url="http://$_pkgname.sourceforge.net/"
@@ -40,7 +40,7 @@ package() {
 	ln -s /usr/lib32/libhistory.so.8.0 $pkgdir/usr/lib32/libhistory.so.7
 	ln -s /usr/lib32/libncursesw.so $pkgdir/usr/lib32/libncurses.so.5
 	ln -s /usr/lib32/libncursesw.so $pkgdir/usr/lib32/libtinfo.so.5
-	ln -s $pkgdir/usr/local/lib/libagena.so $pkgdir/usr/lib32/libagena.so
+	cp $pkgdir/usr/local/lib/libagena.so $pkgdir/usr/lib32/libagena.so
 
 	# generate desktop file for agenaedit
 	mkdir $pkgdir/usr/share
