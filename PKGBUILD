@@ -1,14 +1,15 @@
 # Maintainer: Your Name <abrahammurciano at gmail dot com>
 _pkgname="agena"
 pkgname="$_pkgname-bin"
-pkgver="2.22.0"
-pkgrel=15
+pkgver="2.22.1"
+filename="data.tar.xz"
+pkgrel=0
 pkgdesc="An easy-to-learn procedural programming language designed to be used in science, scripting, and many other applications."
 arch=('x86_64')
 url="http://$_pkgname.sourceforge.net/"
 license=('GPL')
 groups=()
-depends=("lib32-readline" "lib32-ncurses" "lib32-libxext")
+depends=("lib32-readline" "lib32-ncurses" "lib32-libxext" "lib32-gcc-libs")
 makedepends=()
 checkdepends=()
 optdepends=()
@@ -19,15 +20,10 @@ backup=()
 options=()
 install=
 changelog=
-source=("https://master.dl.sourceforge.net/project/agena/Binaries/Agena%20$pkgver/$_pkgname-$pkgver-linux.i386.deb")
-noextract=("$_pkgname-$pkgver-linux.i386.deb")
-md5sums=('e745338351c2b36f95fb2f0dd0aa61d8')
+source=("$filename")
+noextract=()
+md5sums=('skip')
 validpgpkeys=()
-
-prepare() {
-	# extract data.tar.xz from the .deb file
-	ar p $_pkgname-$pkgver-linux.i386.deb data.tar.xz | tar x -J
-}
 
 package() {
 	# move extracted files to pkgdir
