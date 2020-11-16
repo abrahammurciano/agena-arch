@@ -22,7 +22,7 @@ install=
 changelog=
 source=("$filename")
 noextract=()
-md5sums=('skip')
+md5sums=('128a0f2f165f0be5f57ba221c2b63f82')
 validpgpkeys=()
 
 package() {
