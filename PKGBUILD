@@ -1,6 +1,6 @@
 # Maintainer: Your Name <abrahammurciano at gmail dot com>
 _pkgname="agena"
-pkgname="$_pkgname-bin"
+pkgname="$_pkgname-arch"
 pkgver="2.22.1"
 filename="data.tar.xz"
 pkgrel=0
